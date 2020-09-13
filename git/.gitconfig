@@ -1,0 +1,20 @@
+[alias]
+    co = checkout
+    ci = commit -S
+    st = status -s
+    alias = config --global --replace-all
+    m = merge -S --ff-only
+    cob = checkout -b
+    lg = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    up = "!git remote update -p; git merge --ff-only @{u}"
+    cl = clean -xdf -e packages/ -e .vs/
+[user]
+    signingkey = D8938503C4DC6DAD
+    email = brianwagener@gmail.com
+    name = Brian Wagener
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[submodule]
+    recurse = true
